@@ -34,6 +34,7 @@ GROUP BY p.Type
 selected_city = st.sidebar.selectbox(
     "Select City for Contact Info",
     pd.read_sql("SELECT DISTINCT City FROM providers", engine)['City']
+    key="contact_city"
 )
 
 q4 = pd.read_sql(f"""
@@ -328,7 +329,7 @@ city_list = ["All"] + sorted(food['City'].dropna().unique().tolist())
 food_type_list = ["All"] + sorted(food['Food_Type'].dropna().unique().tolist())
 meal_type_list = ["All"] + sorted(food['Meal_Type'].dropna().unique().tolist())
 
-city_filter = st.sidebar.selectbox("City", city_list)
+city_filter = st.sidebar.selectbox("City", city_list, key= "city_filter")
 food_type_filter = st.sidebar.selectbox("Food Type", food_type_list)
 meal_type_filter = st.sidebar.selectbox("Meal Type", meal_type_list)
 
