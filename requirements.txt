@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 streamlit
 pandas
 sqlalchemy
 plotly
+=======
+streamlit
+pandas
+sqlalchemy
+plotly
+>>>>>>> 37176c0 (initial commit)
