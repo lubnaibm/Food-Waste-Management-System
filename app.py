@@ -33,7 +33,7 @@ GROUP BY p.Type
 
 selected_city = st.sidebar.selectbox(
     "Select City for Contact Info",
-    pd.read_sql("SELECT DISTINCT City FROM providers", engine)['City']
+    pd.read_sql("SELECT DISTINCT City FROM providers", engine)['City'],
     key="contact_city"
 )
 
